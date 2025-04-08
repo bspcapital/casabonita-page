@@ -117,6 +117,7 @@ export default function Header() {
                 e.preventDefault();
                 scrollToElementWithSpeed("home", 1000);
               }
+              setIsOpen(false);
             }}
           >
             Home
@@ -130,6 +131,7 @@ export default function Header() {
                 e.preventDefault();
                 scrollToElementWithSpeed("about", 1000);
               }
+              setIsOpen(false);
             }}
           >
             About
@@ -143,6 +145,7 @@ export default function Header() {
                 e.preventDefault();
                 scrollToElementWithSpeed("discover", 1000);
               }
+              setIsOpen(false);
             }}
           >
             Suites
@@ -156,6 +159,7 @@ export default function Header() {
                 e.preventDefault();
                 scrollToElementWithSpeed("gallery", 1000);
               }
+              setIsOpen(false);
             }}
           >
             Gallery
@@ -169,6 +173,7 @@ export default function Header() {
                 e.preventDefault();
                 scrollToElementWithSpeed("contact", 1000);
               }
+              setIsOpen(false);
             }}
           >
             Contact
