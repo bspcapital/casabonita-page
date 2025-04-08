@@ -2,9 +2,10 @@
 export function scrollToElementWithSpeed(id: string, duration = 1000) {
     const target = document.getElementById(id);
     if (!target) return;
-  
+
+    const headerOffset = 82; // Adjust this to match your fixed header height
     const startY = window.scrollY;
-    const endY = target.getBoundingClientRect().top + window.scrollY;
+    const endY = target.getBoundingClientRect().top + window.scrollY - headerOffset;  
     const distance = endY - startY;
     const startTime = performance.now();
   

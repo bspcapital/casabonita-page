@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <Inner backgroundColor={"ffffff"}>
     <div>
-        <main className="relative w-full flex flex-col items-center justify-center text-white bg-black">
+        <main className="relative w-full flex flex-col items-center justify-center text-white bg-gray-400 pt-[82px]">
           {/* Hero Section */}
           <Hero id="home"/>
 

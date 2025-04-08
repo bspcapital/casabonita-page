@@ -4,7 +4,7 @@ type Props = React.HTMLAttributes<HTMLDivElement>;
 const About = ({ id }: Props) => {
 
   return (
-    <section id={id} className="w-full py-16 md:py-24 px-6 bg-gray-50 min-h-screen"> {/* Added padding, adjusted bg */}
+    <section id={id} className="w-full py-16 md:py-24 px-6 bg-gray-50 min-h-screen scroll-mt-[100px]"> {/* Added padding, adjusted bg */}
       {/* Increased max-width for better spacing in two columns */}
       <div className="max-w-6xl mx-auto">
         {/* Flex container for columns: stack on mobile, row on medium screens+ */}

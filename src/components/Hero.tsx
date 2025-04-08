@@ -5,7 +5,7 @@ type Props = React.HTMLAttributes<HTMLDivElement>;
 const Hero = ({ id }: Props) => {
 
   return (
-    <section id={id} className="relative w-full min-h-screen flex flex-col items-center justify-center">
+    <section id={id} className="relative w-full min-h-screen flex flex-col items-center justify-center bg-black">
         <div className="absolute inset-0 bg-[url('/home-bg.jpg')] bg-cover bg-center opacity-70" />
         <motion.div
           className="relative z-10 text-center"
