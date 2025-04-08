@@ -1,9 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from 'next/image';
 
 type Props = React.HTMLAttributes<HTMLDivElement>;
-const Hero = ({ id, className, ...rest }: Props) => {
+const Hero = ({ id }: Props) => {
 
   return (
     <section id={id} className="relative w-full min-h-screen flex flex-col items-center justify-center">

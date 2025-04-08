@@ -1,10 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
-import Image from 'next/image';
 import SuiteCarousel from '@/components/SuiteCarousel';
 import Link from 'next/link';
 type Props = React.HTMLAttributes<HTMLDivElement>;
-const DiscoverSuites = ({ id, className, ...rest }: Props) => {
+const DiscoverSuites = ({ id }: Props) => {
 
   return (
     <section id={id} className="w-full py-16 md:py-24 px-6 lg:px-12 bg-[#F1EBE3] text-black min-h-screen">

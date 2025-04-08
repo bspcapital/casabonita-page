@@ -42,7 +42,7 @@ const galleryItemVariants = {
 
 type Props = React.HTMLAttributes<HTMLDivElement>;
 
-const Gallery = ({ id, className, ...rest }: Props) => {
+const Gallery = ({ id }: Props) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
   const openLightbox = (index: number) => {
@@ -78,9 +78,10 @@ const Gallery = ({ id, className, ...rest }: Props) => {
           closeLightbox();
         } else if (event.key === 'ArrowRight') {
           // Simulate a fake event to stop propagation if needed, or just call the core logic
-          goToNext(event as any); // Cast event type or create fake event if strict typing needed
+          goToNext({ stopPropagation: () => {} } as unknown as React.MouseEvent);
+           // Cast event type or create fake event if strict typing needed
         } else if (event.key === 'ArrowLeft') {
-          goToPrevious(event as any);
+          goToPrevious({ stopPropagation: () => {} } as unknown as React.MouseEvent);
         }
       }
     };

@@ -1,8 +1,7 @@
 "use client";
-import { motion } from "framer-motion";
 import Image from 'next/image';
 
-export default function Hero() {
+export default function WhyChooseUs() {
   const whyChooseUsData = [
   {
     iconSrc: "/icons/home.png", // <-- REPLACE with actual path

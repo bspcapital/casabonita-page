@@ -1,8 +1,7 @@
 "use client"
-import Image from 'next/image';
 import ImageColumn from '@/components/ImageColumn';
 type Props = React.HTMLAttributes<HTMLDivElement>;
-const About = ({ id, className, ...rest }: Props) => {
+const About = ({ id }: Props) => {
 
   return (
     <section id={id} className="w-full py-16 md:py-24 px-6 bg-gray-50 min-h-screen"> {/* Added padding, adjusted bg */}

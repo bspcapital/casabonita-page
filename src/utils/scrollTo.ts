@@ -8,8 +8,8 @@ export function scrollToElementWithSpeed(id: string, duration = 1000) {
     const distance = endY - startY;
     const startTime = performance.now();
   
-    const easeInOutQuad = (t: number) =>
-      t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+  //  const easeInOutQuad = (t: number) =>
+  //    t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
   
     function animate(time: number) {
       const elapsed = time - startTime;

@@ -2,11 +2,10 @@
 "use client";
 
 import React from 'react';
-import Image from 'next/image';
 import ImageColumn from '@/components/ImageColumn';
 type Props = React.HTMLAttributes<HTMLDivElement>;
 
-const ContactForm = ({ id, className, ...rest }: Props) => {
+const ContactForm = ({ id }: Props) => {
   // Placeholder for form submission logic (to be added later)
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

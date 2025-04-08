@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import Image from 'next/image'; // Use Next.js Image for optimization
 import Gallery from '@/components/Gallery';
 import ContactForm from '@/components/ContactForm';
 import About from '@/components/About';
@@ -8,11 +6,8 @@ import Inner from '@/components/Inner';
 import DiscoverSuites from "@/components/DiscoverSuites";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import { useEffect } from "react";
-import { useRouter } from "next/router";
 
 export default function Home() {
-  const router = useRouter();
-
   useEffect(() => {
     const hash = window.location.hash;
 
