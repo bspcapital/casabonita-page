@@ -25,9 +25,45 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex space-x-6">
-          <Link href="#home" className="hover:text-gray-200 text-marcellus text-lg text-gray-600" scroll={false} onClick={(e) => { e.preventDefault(); scrollToElementWithSpeed('home', 1000);}}>Home</Link>
-          <Link href="#about" className="hover:text-gray-200 text-marcellus text-gray-600 text-lg" scroll={false} onClick={(e) => { e.preventDefault(); scrollToElementWithSpeed('about', 1000);}}>About</Link>
-          <Link href="#discover" className="hover:text-gray-200 text-marcellus text-gray-600 text-lg" scroll={false} onClick={(e) => { e.preventDefault(); scrollToElementWithSpeed('discover', 1000);}}>Suites</Link>
+          <Link
+            href={onHome ? "#home" : "/#home"}
+            scroll={false}
+            className="hover:text-gray-200 text-marcellus text-gray-600 text-lg"
+            onClick={(e) => {
+              if (onHome) {
+                e.preventDefault();
+                scrollToElementWithSpeed("home", 1000);
+              }
+            }}
+          >
+            Home
+          </Link>
+          <Link
+            href={onHome ? "#about" : "/#about"}
+            scroll={false}
+            className="hover:text-gray-200 text-marcellus text-gray-600 text-lg"
+            onClick={(e) => {
+              if (onHome) {
+                e.preventDefault();
+                scrollToElementWithSpeed("about", 1000);
+              }
+            }}
+          >
+            About
+          </Link>
+          <Link
+            href={onHome ? "#discover" : "/#discover"}
+            scroll={false}
+            className="hover:text-gray-200 text-marcellus text-gray-600 text-lg"
+            onClick={(e) => {
+              if (onHome) {
+                e.preventDefault();
+                scrollToElementWithSpeed("discover", 1000);
+              }
+            }}
+          >
+            Suites
+          </Link>
           <Link
             href={onHome ? "#gallery" : "/#gallery"}
             scroll={false}
@@ -37,12 +73,23 @@ export default function Header() {
                 e.preventDefault();
                 scrollToElementWithSpeed("gallery", 1000);
               }
-              // If not on home, just let Link do its thing
             }}
           >
             Gallery
           </Link>
-          <Link href="#contact" className="hover:text-gray-200 text-marcellus text-gray-600 text-lg" scroll={false} onClick={(e) => { e.preventDefault(); scrollToElementWithSpeed('contact', 1000);}}>Contact</Link>
+          <Link
+            href={onHome ? "#contact" : "/#contact"}
+            scroll={false}
+            className="hover:text-gray-200 text-marcellus text-gray-600 text-lg"
+            onClick={(e) => {
+              if (onHome) {
+                e.preventDefault();
+                scrollToElementWithSpeed("contact", 1000);
+              }
+            }}
+          >
+            Contact
+          </Link>
         </nav>
 
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -61,11 +108,71 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Link href="#home" className="py-2" scroll={false} onClick={(e) => { e.preventDefault(); scrollToElementWithSpeed('home', 1000);}}>Home</Link>
-            <Link href="#about" className="py-2" scroll={false} onClick={(e) => { e.preventDefault(); scrollToElementWithSpeed('about', 1000);}}>About</Link>
-            <Link href="#discover" className="py-2" scroll={false} onClick={(e) => { e.preventDefault(); scrollToElementWithSpeed('discover', 1000);}}>Suites</Link>
-            <Link href="#gallery" className="py-2" scroll={false} onClick={(e) => { e.preventDefault(); scrollToElementWithSpeed('gallery', 1000);}}>Gallery</Link>
-            <Link href="#contact" className="py-2" scroll={false} onClick={(e) => { e.preventDefault(); scrollToElementWithSpeed('contact', 1000);}}>Contact</Link>
+            <Link
+            href={onHome ? "#home" : "/#home"}
+            scroll={false}
+            className="py-2"
+            onClick={(e) => {
+              if (onHome) {
+                e.preventDefault();
+                scrollToElementWithSpeed("home", 1000);
+              }
+            }}
+          >
+            Home
+          </Link>
+          <Link
+            href={onHome ? "#about" : "/#about"}
+            scroll={false}
+            className="py-2"
+            onClick={(e) => {
+              if (onHome) {
+                e.preventDefault();
+                scrollToElementWithSpeed("about", 1000);
+              }
+            }}
+          >
+            About
+          </Link>
+          <Link
+            href={onHome ? "#discover" : "/#discover"}
+            scroll={false}
+            className="py-2"
+            onClick={(e) => {
+              if (onHome) {
+                e.preventDefault();
+                scrollToElementWithSpeed("discover", 1000);
+              }
+            }}
+          >
+            Suites
+          </Link>
+          <Link
+            href={onHome ? "#gallery" : "/#gallery"}
+            scroll={false}
+            className="py-2"
+            onClick={(e) => {
+              if (onHome) {
+                e.preventDefault();
+                scrollToElementWithSpeed("gallery", 1000);
+              }
+            }}
+          >
+            Gallery
+          </Link>
+          <Link
+            href={onHome ? "#contact" : "/#contact"}
+            scroll={false}
+            className="py-2"
+            onClick={(e) => {
+              if (onHome) {
+                e.preventDefault();
+                scrollToElementWithSpeed("contact", 1000);
+              }
+            }}
+          >
+            Contact
+          </Link>
           </motion.div>
         )}
       </div>
