@@ -49,6 +49,10 @@ html:not(.hydrated) body {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-tealfont: #61c7b6;
+  --color-tanski: #F1EBE3;
+  --color-oj: #EB8324;
+  --color-peach: #FFFAF5;
+  --color-altpeach: ##F1EBE0;
   --font: 
 }
 
