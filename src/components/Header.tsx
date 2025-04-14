@@ -15,16 +15,18 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full backdrop-blur-sm bg-tealfont/10 z-50">
       <div className="flex items-center justify-between p-4">
         {/* 1. Logo on the left */}
-        <Link href="/" className="block">
-          <Image
-            src="/footer-logo.png"
-            alt="Casa Bonita Logo"
-            width={60} // Logo width
-            height={60}
-          />
-        </Link>
+        <div className="w-[60px] flex-shrink-0">
+          <Link href="/" className="block">
+            <Image
+              src="/footer-logo.png"
+              alt="Casa Bonita Logo"
+              width={60}
+              height={60}
+            />
+          </Link>
+        </div>
 
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex flex-1 space-x-6 justify-center">
           <Link
             href={onHome ? "#home" : "/#home"}
             scroll={false}
@@ -91,6 +93,22 @@ export default function Header() {
             Contact
           </Link>
         </nav>
+        {/*
+        <div className="ml-auto flex items-center space-x-2 text-sm">
+            <button
+              onClick={() => router.push(router.asPath, router.asPath, { locale: "en" })}
+              className={`px-2 py-1 rounded ${router.locale === "en" ? "bg-gray-200 font-semibold" : ""}`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => router.push(router.asPath, router.asPath, { locale: "es" })}
+              className={`px-2 py-1 rounded ${router.locale === "es" ? "bg-gray-200 font-semibold" : ""}`}
+            >
+              ES
+            </button>
+          </div>
+        */}
 
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
           ☰
@@ -179,6 +197,7 @@ export default function Header() {
             Contact
           </Link>
           </motion.div>
+          
         )}
       </div>
     </header>

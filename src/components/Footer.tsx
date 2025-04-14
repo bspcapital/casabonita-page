@@ -2,10 +2,16 @@
 "use client"; // May be needed if you add interactivity later
 
 import React from 'react';
+import { useState } from "react";
 import Image from 'next/image';
 import Link from 'next/link'; // Use Next.js Link for internal navigation
+import { scrollToElementWithSpeed } from "@/utils/scrollTo";
+import { useRouter } from 'next/router';
 
 const Footer: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+  const onHome = router.pathname === "/";
 
   const handleNewsletterSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -52,11 +58,81 @@ const Footer: React.FC = () => {
           <div className="space-y-3">
             <h3 className="text-2xl text-marcellus uppercase tracking-wider mb-4 border-b border-black/30 pb-2">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/" className="flex items-center gap-2 hover:text-gray-700 text-internon text-base"><span className="text-black/70 font-bold">-</span>Home</Link></li>
-              <li><Link href="/about" className="flex items-center gap-2 hover:text-gray-700 text-internon text-base"><span className="text-black/70 font-bold">-</span> About Us</Link></li>
-              <li><Link href="/services" className="flex items-center gap-2 hover:text-gray-700 text-internon text-base"><span className="text-black/70 font-bold">-</span> Services</Link></li>
-              <li><Link href="/gallery" className="flex items-center gap-2 hover:text-gray-700 text-internon text-base"><span className="text-black/70 font-bold">-</span> Gallery</Link></li>
-              <li><Link href="/contact" className="flex items-center gap-2 hover:text-gray-700 text-internon text-base"><span className="text-black/70 font-bold">-</span> Contact Us</Link></li>
+              <li>
+              <Link
+                href={onHome ? "#home" : "/#home"}
+                scroll={false}
+                className="flex items-center gap-2 hover:text-gray-700 text-internon text-base"
+                onClick={(e) => {
+                  if (onHome) {
+                    e.preventDefault();
+                    scrollToElementWithSpeed("home", 1000);
+                  }
+                }}
+              >
+                Home
+              </Link>
+              </li>
+              <li>
+              <Link
+                href={onHome ? "#about" : "/#about"}
+                scroll={false}
+                className="flex items-center gap-2 hover:text-gray-700 text-internon text-base"
+                onClick={(e) => {
+                  if (onHome) {
+                    e.preventDefault();
+                    scrollToElementWithSpeed("about", 1000);
+                  }
+                }}
+              >
+                About
+              </Link>
+              </li>
+              <li>
+              <Link
+                href={onHome ? "#discover" : "/#discover"}
+                scroll={false}
+                className="flex items-center gap-2 hover:text-gray-700 text-internon text-base"
+                onClick={(e) => {
+                  if (onHome) {
+                    e.preventDefault();
+                    scrollToElementWithSpeed("discover", 1000);
+                  }
+                }}
+              >
+                Suites
+              </Link>
+              </li>
+              <li>
+              <Link
+                href={onHome ? "#gallery" : "/#gallery"}
+                scroll={false}
+                className="flex items-center gap-2 hover:text-gray-700 text-internon text-base"
+                onClick={(e) => {
+                  if (onHome) {
+                    e.preventDefault();
+                    scrollToElementWithSpeed("gallery", 1000);
+                  }
+                }}
+              >
+                Gallery
+              </Link>
+              </li>
+              <li>
+              <Link
+                href={onHome ? "#contact" : "/#contact"}
+                scroll={false}
+                className="flex items-center gap-2 hover:text-gray-700 text-internon text-base"
+                onClick={(e) => {
+                  if (onHome) {
+                    e.preventDefault();
+                    scrollToElementWithSpeed("contact", 1000);
+                  }
+                }}
+              >
+                Contact
+              </Link>
+              </li>
             </ul>
           </div>
 

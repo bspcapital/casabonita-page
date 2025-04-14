@@ -27,11 +27,10 @@ const suitesData: SuiteInfo[] = [
     id: '1-bedroom-oceanview',
     tabName: '1-Bedroom Suite',
     title: '1-Bedroom Oceanview Suite',
-    description:
-      'Our cozy one-bedroom suite is perfect for couples or solo travelers looking for a peaceful retreat. Featuring a spacious bedroom, fully equipped kitchen, and a private balcony with stunning ocean views.',
+    description: 'Our spacious 1-bedroom suites at Casa Bonita offer a comfortable retreat in Rincon de Guayabitos, perfect for families, friends, or couples. Each suite is equipped with air conditioning and high-speed Wi-Fi. The fully stocked kitchen allows for easy meal preparation, while the matrimonial-size bed ensures a restful night’s sleep. Outside, you’ll find a refreshing pool and grill area, ideal for relaxing and enjoying the outdoors.',
     amenities: [
-      'Queen-sized bed with premium linens', 'High-speed WiFi', 'Smart TV',
-      'Air conditioning', 'Modern bathroom', 'Complimentary toiletries',
+      'Matrimonial-size Bed', 'High-speed WiFi', 'Fully-stocked Kitchen',
+      'Air Conditioning', 'Fully-equipped Bathroom', 'Refreshing Pool', 'Grill Area'
     ],
     maxOccupancy: '2 guests',
     size: '650 sq ft',
@@ -44,10 +43,10 @@ const suitesData: SuiteInfo[] = [
     tabName: '2-Bedroom Suite',
     title: '2-Bedroom Luxury Suite',
     description:
-      'Our spacious two-bedroom suite is ideal for families or groups. With two separate bedrooms, a generous living area, kitchen, and an expansive terrace overlooking the Caribbean Sea.',
+      'Our spacious 2-bedroom suites at Casa Bonita offer an ideal setting for families, friends, or couples seeking a comfortable retreat in Rincon de Guayabitos. Each suite is thoughtfully designed to provide all the comforts of home, featuring a cozy living room where guests can relax together, air conditioning for a pleasant stay even during warm days, and high-speed Wi-Fi to keep you connected.',
     amenities: [
-      'King-sized bed', 'Two twin beds', 'Two full bathrooms', 'High-speed WiFi',
-      'Smart TVs', 'Air conditioning', 'Dining area (seats 6)',
+      'Queen-size Bed', 'Full-size Bed', 'High-speed WiFi', 'Fully-stocked Kitchen', 
+      'Air conditioning', 'Fully-equipped Bathroom', 'Living Room', 'Refreshing Pool', 'Grill Area'
     ],
     maxOccupancy: '4 guests (up to 6)',
     size: '950 sq ft',
@@ -118,7 +117,7 @@ const SuitesPage: React.FC = () => {
           {/* Main Suite Selector Container */}
           <div className="max-w-10xl mx-auto border border-gray-200 rounded-lg shadow-xl bg-peach overflow-hidden">
             {/* Tab Navigation */}
-            <div className="flex border-b border-gray-200">
+            <div className="flex border-b border-gray-200 text-marcellus">
               {suitesData.map((suite) => (
                 <button
                   key={suite.id}
