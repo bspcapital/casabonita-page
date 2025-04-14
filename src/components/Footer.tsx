@@ -2,14 +2,12 @@
 "use client"; // May be needed if you add interactivity later
 
 import React from 'react';
-import { useState } from "react";
 import Image from 'next/image';
 import Link from 'next/link'; // Use Next.js Link for internal navigation
 import { scrollToElementWithSpeed } from "@/utils/scrollTo";
 import { useRouter } from 'next/router';
 
 const Footer: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const onHome = router.pathname === "/";
 

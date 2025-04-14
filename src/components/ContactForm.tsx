@@ -6,14 +6,6 @@ import ImageColumn from '@/components/ImageColumn';
 type Props = React.HTMLAttributes<HTMLDivElement>;
 
 const ContactForm = ({ id }: Props) => {
-  // Placeholder for form submission logic (to be added later)
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // TODO: Implement form submission (e.g., send data to an API route)
-    console.log("Form submitted (placeholder)");
-    // You might want to clear the form or show a success message here
-  };
-
   return (
     <section id={id} className="w-full py-16 md:py-24 px-6 lg:px-12 bg-white text-black min-h-screen">
       <div className="max-w-6xl mx-auto">

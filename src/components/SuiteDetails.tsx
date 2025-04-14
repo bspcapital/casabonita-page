@@ -1,7 +1,6 @@
 // components/SuiteDetails.tsx
 import React from 'react';
 import Link from 'next/link';
-import { scrollToElementWithSpeed } from "@/utils/scrollTo";
 // Re-use or import the SuiteInfo interface definition
 interface SuiteInfo {
   id: string;
