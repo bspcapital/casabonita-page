@@ -34,7 +34,11 @@ const ContactForm = ({ id }: Props) => {
             </h2>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              action="https://formspree.io/f/mldjzyoe"
+              method="POST"
+              className="space-y-6"
+            >
               {/* Grid for Inputs */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6 text-internon">
                 {/* Full Name */}
@@ -104,15 +108,26 @@ const ContactForm = ({ id }: Props) => {
                  {/* Preferred Stay Dates */}
                  <div>
                   <label htmlFor="stayDates" className="block text-base font-medium text-gray-700 mb-1">
-                    Preferred Stay Dates
+                    Preferred Stay Dates — From
                   </label>
                   <input
-                    type="text" // Consider using a date picker library later
-                    name="stayDates"
-                    id="stayDates"
-                    placeholder="Preferred Stay Dates"
+                    type="date" // Consider using a date picker library later
+                    name="from"
+                    id="from"
                     className="block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
                   />
+                </div>
+
+                <div>
+                <label htmlFor="to" className="block text-base font-medium text-gray-700 mb-1">
+                    To
+                </label>
+                    <input
+                      type="date" // Consider using a date picker library later
+                      name="to"
+                      id="to"
+                      className="block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
+                    />
                 </div>
 
                 {/* Number of Guests */}

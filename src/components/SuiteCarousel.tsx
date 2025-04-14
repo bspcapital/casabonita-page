@@ -4,6 +4,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'; // Import AnimatePresence for smoother transitions
 import Image from 'next/image'; // Use Next.js Image for optimization
+import Link from "next/link";
+import { scrollToElementWithSpeed } from "@/utils/scrollTo";
 
 // Define Amenity structure
 interface Amenity {
@@ -35,7 +37,7 @@ const suitesData: Suite[] = [
       { imageSrc: "/icons/toilet.svg", text: "Fully Stocked Washroom" },
       { imageSrc: "/icons/swimmer.svg", text: "Pool And Grill Access" },
     ],
-    bookingLink: "/booking?suite=1",
+    bookingLink: "#contact",
   },
   {
     id: 2,
@@ -49,7 +51,7 @@ const suitesData: Suite[] = [
       { imageSrc: "/icons/toilet.svg", text: "Fully Stocked Washroom" },
       { imageSrc: "/icons/swimmer.svg", text: "Pool And Grill Access" },
     ],
-    bookingLink: "/booking?suite=2",
+    bookingLink: "#contact",
   },
 ];
 const SuiteCarousel: React.FC = () => {
@@ -136,12 +138,13 @@ return (
                             </div>
 
                             {/* Book Now Button */}
-                            <a
+                            <Link
                                 href={currentSuite.bookingLink}
                                 className="bg-white border border-white text-black px-10 py-2.5 rounded text-lg text-marcellus transition duration-300 ease-in-out hover:bg-[#F5A623] hover:border-transparent hover:text-white"
+                                onClick={(e) => { e.preventDefault(); scrollToElementWithSpeed('contact', 1000);}}
                             >
                                 Book Now
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Spacer */}

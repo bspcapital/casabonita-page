@@ -1,5 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { scrollToElementWithSpeed } from "@/utils/scrollTo";
 
 type Props = React.HTMLAttributes<HTMLDivElement>;
 const Hero = ({ id }: Props) => {
@@ -17,9 +19,9 @@ const Hero = ({ id }: Props) => {
           <h1 className="text-8xl text-marcellus">Casa Bonita</h1>
           <p className="text-4xl mt-4 text-marcellus text-[#8CEBFF]">Your Haven of Comfort in Rincon de Guayabitos</p>
           <p className="text-xl mt-4 text-inter">Just 750 metres from the beach</p>
-          <a href="/booking" className="mt-6 inline-block bg-blue-500 px-6 py-3 rounded-full text-lg hover:bg-blue-700 transition">
+          <Link href="#contact" className="mt-6 inline-block bg-blue-500 px-6 py-3 rounded-full text-lg hover:bg-blue-700 transition" onClick={(e) => { e.preventDefault(); scrollToElementWithSpeed('contact', 1000);}}>
             Book Now
-          </a>
+          </Link>
         </motion.div>
       </section>
   );
